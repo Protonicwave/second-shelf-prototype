@@ -1,4 +1,23 @@
-/* The page frame: masthead, the assumptions rail and the footer. */
+/* The page frame: the skip link and the masthead. */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 60;
+  background: var(--ticket);
+  color: var(--ticket-ink);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+}
+
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+}
 
 .masthead {
   position: sticky;
@@ -55,113 +74,5 @@
 @media (max-width: 720px) {
   .masthead-meta {
     display: none;
-  }
-}
-
-.assume {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 50;
-  background: var(--card);
-  border-top: 1px solid var(--ink);
-}
-
-.assume-in {
-  display: flex;
-  align-items: center;
-  gap: clamp(16px, 3vw, 44px);
-  height: var(--assume-h);
-  overflow-x: auto;
-}
-
-.assume-lab {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--ink3);
-  flex-shrink: 0;
-  max-width: 132px;
-  line-height: 1.4;
-}
-
-.assume-out {
-  margin-left: auto;
-  flex-shrink: 0;
-  text-align: right;
-  padding-left: 20px;
-}
-
-.assume-out .k {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink3);
-}
-
-.assume-out .v {
-  font-family: var(--font-mono);
-  font-variant-numeric: tabular-nums;
-  font-size: 26px;
-  font-weight: 500;
-  margin-top: 4px;
-  letter-spacing: -0.01em;
-}
-
-@media (max-width: 760px) {
-  .assume-lab {
-    display: none;
-  }
-
-  .assume-in {
-    height: 88px;
-    gap: 18px;
-  }
-}
-
-footer {
-  border-top: 1px solid var(--rule);
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.foot-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.foot-h {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--ink3);
-}
-
-.foot-grid p,
-.foot-grid li {
-  font-size: var(--size-small);
-  line-height: 1.6;
-  color: var(--ink2);
-  margin-top: 12px;
-}
-
-.foot-grid ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.foot-grid li {
-  margin-top: 8px;
-}
-
-@media (max-width: 760px) {
-  .foot-grid {
-    grid-template-columns: 1fr;
   }
 }

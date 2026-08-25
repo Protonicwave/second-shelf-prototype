@@ -1,6 +1,16 @@
 import type { ReactElement } from 'react';
 import { DEFAULT_DAY_COUNT } from '@secondshelf/domain';
-import { formatPounds } from './lib/format';
+import {
+  AssumptionsBar,
+  Decision,
+  Figures,
+  FloorView,
+  Footer,
+  Hero,
+  Integration,
+  LineTable,
+  PolicyChart,
+} from './sections';
 import { useSimulation } from './state/useSimulation';
 import './styles/tokens.css';
 import './styles/base.css';
@@ -20,79 +30,33 @@ const Masthead = (): ReactElement => (
   </header>
 );
 
-const SiteFooter = (): ReactElement => (
-  <footer className="wrap">
-    <div className="foot-grid">
-      <div>
-        <div className="foot-h">What is real</div>
-        <p>
-          The engine, the search over reductions and the policy comparison are real code, and run
-          live in your browser on this page. The store, the 24 lines and the demand are simulated
-          from a fixed seed, so every reload gives the same numbers.
-        </p>
-      </div>
-      <div>
-        <div className="foot-h">Sources</div>
-        <ul>
-          <li>WRAP, Food Surplus and Waste in the UK, for retail waste tonnage and value</li>
-          <li>WRAP conversion factors for CO&#8322;e per tonne of food waste</li>
-          <li>
-            Category price sensitivity taken from published grocery pricing work, then exposed as a
-            control rather than buried in the code
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div className="foot-h">Built by</div>
-        <p>
-          Shlok Bhusal. Full stack. TypeScript throughout, tested engine, no dependencies in the
-          pricing logic.
-        </p>
-        <p>Built as a working answer to the problem, not as a pitch.</p>
-      </div>
-    </div>
-  </footer>
-);
-
-interface AssumptionsRailProps {
-  readonly recoveredPence: number | null;
-  readonly pending: boolean;
-}
-
-/*
- * The rail is mounted here so the layout reserves its height from the first
- * paint. The three controls that fill it arrive with the page sections.
- */
-const AssumptionsRail = ({ recoveredPence, pending }: AssumptionsRailProps): ReactElement => (
-  <div className="assume">
-    <div className="wrap assume-in">
-      <div className="assume-lab">
-        Assumptions
-        <br />
-        you can argue with
-      </div>
-      <div className="assume-out">
-        <div className="k">Recovered, {DEFAULT_DAY_COUNT} days</div>
-        <div className="v" aria-live="polite" aria-busy={pending}>
-          {recoveredPence === null ? 'Working' : formatPounds(recoveredPence)}
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-/** The page frame. Sections mount inside the main region as they are built. */
+/** The whole page. One run drives every section on it. */
 export const App = (): ReactElement => {
-  const simulation = useSimulation();
-  const recoveredPence =
-    simulation.metrics === null ? null : simulation.metrics.valueRecoveredPence;
+  const { assumptions, run, metrics, pending, error, setAssumptions } = useSimulation();
 
   return (
     <>
+      <a className="skip-link" href="#main">
+        Skip to the content
+      </a>
       <Masthead />
-      <main id="main" />
-      <SiteFooter />
-      <AssumptionsRail recoveredPence={recoveredPence} pending={simulation.pending} />
+      <main id="main">
+        <Hero />
+        <Figures metrics={metrics} />
+        <PolicyChart days={run?.days ?? []} />
+        <Decision assumptions={assumptions} />
+        <LineTable lines={run?.lines ?? []} dayCount={run?.dayCount ?? DEFAULT_DAY_COUNT} />
+        <FloorView lines={run?.lines ?? []} />
+        <Integration />
+      </main>
+      <Footer />
+      <AssumptionsBar
+        assumptions={assumptions}
+        recoveredPence={metrics?.valueRecoveredPence ?? null}
+        pending={pending}
+        error={error}
+        onChange={setAssumptions}
+      />
     </>
   );
 };

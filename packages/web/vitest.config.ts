@@ -6,6 +6,8 @@ export default defineConfig({
   test: {
     name: 'web',
     environment: 'jsdom',
+    // Testing Library unmounts between tests only when the hooks are global.
+    globals: true,
     include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
   },
 });

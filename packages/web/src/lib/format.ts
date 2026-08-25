@@ -1,4 +1,4 @@
-import { OPEN_HOUR } from '@secondshelf/engine';
+import { OPEN_HOUR, type MarkdownPlan } from '@secondshelf/engine';
 
 const LOCALE = 'en-GB';
 
@@ -52,3 +52,14 @@ export const roundToLabelPrice = (pence: number): number => {
   const rounded = Math.round(pence / 5) * 5;
   return rounded < 5 ? 5 : rounded;
 };
+
+/**
+ * Returns a plan as the instruction a colleague reads, for example 25% at
+ * 15:00, 50% at 18:00. An empty plan reads as leaving the price alone.
+ */
+export const formatPlan = (plan: MarkdownPlan): string =>
+  plan.length === 0
+    ? 'No change'
+    : plan
+        .map((stage) => `${Math.round(stage.reduction * 100)}% at ${formatClockTime(stage.hour)}`)
+        .join(', ');
