@@ -23,6 +23,14 @@ const STEP_PENCE = 100_000;
 /** The day the annotation points at, where the two policies have clearly parted. */
 const ANNOTATION_DAY_INDEX = 8;
 
+const ANNOTATION_LINES = [
+  'The engine pulls away once it starts',
+  'reducing before the evening rush',
+] as const;
+
+/** Rough advance of the annotation type, in user units per character. */
+const ANNOTATION_CHAR_WIDTH = 7;
+
 const innerWidth = WIDTH - MARGIN_LEFT - MARGIN_RIGHT;
 const innerHeight = HEIGHT - MARGIN_TOP - MARGIN_BOTTOM;
 
@@ -59,8 +67,26 @@ const ChartView = ({ days }: PolicyChartProps): ReactElement | null => {
       )
       .join('');
 
-  const annotation = days[Math.min(ANNOTATION_DAY_INDEX, count - 1)] ?? last;
   const annotationIndex = Math.min(ANNOTATION_DAY_INDEX, count - 1);
+  const annotation = days[annotationIndex] ?? last;
+
+  /*
+   * The engine line only climbs, so text placed above it at the day the
+   * annotation points to is crossed further along. Clear the line at the far
+   * end of the text instead, and keep it inside the top margin.
+   */
+  const annotationX = x(annotationIndex) + 9;
+  const annotationWidth =
+    Math.max(...ANNOTATION_LINES.map((entry) => entry.length)) * ANNOTATION_CHAR_WIDTH;
+  const spanIndex = Math.min(
+    count - 1,
+    Math.ceil(((annotationX + annotationWidth - MARGIN_LEFT) * (count - 1)) / innerWidth),
+  );
+  const spanPoint = days[spanIndex] ?? last;
+  const annotationBase = Math.max(
+    MARGIN_TOP + 26,
+    Math.min(y(annotation.enginePence), y(spanPoint.enginePence)) - 12,
+  );
 
   const description =
     `Cumulative value recovered against no markdown over ${count} trading days. ` +
@@ -114,15 +140,15 @@ const ChartView = ({ days }: PolicyChartProps): ReactElement | null => {
         x1={x(annotationIndex).toFixed(1)}
         x2={x(annotationIndex).toFixed(1)}
         y1={y(annotation.currentPence).toFixed(1)}
-        y2={(y(annotation.enginePence) - 16).toFixed(1)}
+        y2={(annotationBase + 4).toFixed(1)}
         stroke="rgba(18,21,15,.32)"
         strokeWidth={1}
       />
-      <text className="anno-t" x={x(annotationIndex) + 9} y={y(annotation.enginePence) - 24}>
-        The engine pulls away once it starts
+      <text className="anno-t" x={annotationX.toFixed(1)} y={(annotationBase - 14).toFixed(1)}>
+        {ANNOTATION_LINES[0]}
       </text>
-      <text className="anno-t" x={x(annotationIndex) + 9} y={y(annotation.enginePence) - 10}>
-        reducing before the evening rush
+      <text className="anno-t" x={annotationX.toFixed(1)} y={annotationBase.toFixed(1)}>
+        {ANNOTATION_LINES[1]}
       </text>
 
       <path
