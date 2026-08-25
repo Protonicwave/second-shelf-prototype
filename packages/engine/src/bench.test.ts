@@ -8,8 +8,12 @@ const assumptions: Assumptions = {
   disposalCostPerUnitPence: 12,
 };
 
-/** Four times the twenty three milliseconds measured locally, so CI does not flake. */
-const BUDGET_MS = 100;
+/**
+ * Four times the slowest run observed on a shared CI runner, which is itself
+ * roughly eight times the fifteen milliseconds measured locally. The budget is
+ * there to catch an algorithmic regression, not to measure the machine.
+ */
+const BUDGET_MS = 500;
 
 describe('search performance', () => {
   it('searches twenty four lines across thirty days inside the budget', () => {
