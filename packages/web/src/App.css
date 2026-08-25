@@ -1,0 +1,78 @@
+/* The page frame: the skip link and the masthead. */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 60;
+  background: var(--ticket);
+  color: var(--ticket-ink);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+}
+
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+}
+
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: var(--masthead-h);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ticket-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ticket);
+  color: var(--ticket-ink);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: var(--size-eyebrow);
+  letter-spacing: 0.06em;
+  padding: 3px 6px;
+}
+
+.brand-name {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.masthead-meta {
+  font-family: var(--font-mono);
+  font-size: var(--size-eyebrow);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink3);
+}
+
+@media (max-width: 720px) {
+  .masthead-meta {
+    display: none;
+  }
+}

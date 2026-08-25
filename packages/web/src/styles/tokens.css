@@ -1,0 +1,52 @@
+/*
+ * Every colour, type and spacing value the page uses. The design commits to a
+ * single light theme and paints every colour explicitly, so nothing is
+ * inherited from the host and nothing changes under a dark system setting.
+ */
+:root {
+  color-scheme: light;
+
+  /* Surfaces and ink */
+  --paper: #eff1ec;
+  --card: #f8f9f5;
+  --ink: #12150f;
+  --ink2: #575e4f;
+  --ink3: #64685e;
+  --rule: rgba(18, 21, 15, 0.14);
+  --rule-soft: rgba(18, 21, 15, 0.07);
+  --wash: rgba(18, 21, 15, 0.05);
+  --wash-hover: rgba(18, 21, 15, 0.025);
+
+  /* Accents. The ticket yellow is the reduced-price label. */
+  --ticket: #e5ae07;
+  --ticket-ink: #231a00;
+  --ticket-deep: #806303;
+  --ticket-wash: rgba(229, 174, 7, 0.16);
+  --slate: #69808f;
+  --slate-deep: #3e5566;
+  --slate-wash: rgba(105, 128, 143, 0.14);
+  --grey-line: #a9af9f;
+
+  /* Type stacks */
+  --font-serif: Newsreader, Georgia, 'Times New Roman', serif;
+  --font-sans: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Type scale */
+  --size-h1: clamp(38px, 6.2vw, 72px);
+  --size-h2: clamp(27px, 3.4vw, 40px);
+  --size-h3: 20px;
+  --size-lede: clamp(17px, 1.6vw, 20px);
+  --size-body: 16px;
+  --size-small: 13px;
+  --size-eyebrow: 11px;
+  --size-figure: clamp(28px, 3.4vw, 42px);
+
+  /* Layout */
+  --maxw: 1160px;
+  --pad: clamp(20px, 5vw, 64px);
+  --band-pad: clamp(44px, 6vw, 80px);
+  --radius: 2px;
+  --masthead-h: 52px;
+  --assume-h: 96px;
+}
