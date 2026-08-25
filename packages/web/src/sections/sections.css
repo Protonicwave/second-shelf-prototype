@@ -754,6 +754,17 @@
   margin-top: 12px;
 }
 
+.foot-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.foot-link:hover {
+  text-decoration-thickness: 2px;
+}
+
 .foot-grid ul {
   margin: 0;
   padding: 0;

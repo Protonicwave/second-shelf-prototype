@@ -32,6 +32,15 @@ export const Footer = (): ReactElement => (
           pricing logic.
         </p>
         <p>Built as a working answer to the problem, not as a pitch.</p>
+        <p>
+          <a
+            className="foot-link"
+            href="https://github.com/Protonicwave/second-shelf-prototype"
+            rel="noreferrer"
+          >
+            Read the code on GitHub
+          </a>
+        </p>
       </div>
     </div>
   </footer>
