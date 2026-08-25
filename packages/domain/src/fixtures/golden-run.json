@@ -1,0 +1,689 @@
+{
+  "run": {
+    "seed": 20260825,
+    "dayCount": 30,
+    "assumptions": {
+      "priceSensitivity": 1.8,
+      "staffCostPerEventPence": 40,
+      "disposalCostPerUnitPence": 12
+    },
+    "days": [
+      {
+        "day": 1,
+        "enginePence": 27496,
+        "currentPence": 2851
+      },
+      {
+        "day": 2,
+        "enginePence": 52539,
+        "currentPence": 7973
+      },
+      {
+        "day": 3,
+        "enginePence": 77812,
+        "currentPence": 13473
+      },
+      {
+        "day": 4,
+        "enginePence": 104495,
+        "currentPence": 20218
+      },
+      {
+        "day": 5,
+        "enginePence": 127728,
+        "currentPence": 25001
+      },
+      {
+        "day": 6,
+        "enginePence": 152597,
+        "currentPence": 30241
+      },
+      {
+        "day": 7,
+        "enginePence": 179273,
+        "currentPence": 34392
+      },
+      {
+        "day": 8,
+        "enginePence": 202808,
+        "currentPence": 39768
+      },
+      {
+        "day": 9,
+        "enginePence": 228106,
+        "currentPence": 46093
+      },
+      {
+        "day": 10,
+        "enginePence": 249334,
+        "currentPence": 49190
+      },
+      {
+        "day": 11,
+        "enginePence": 273532,
+        "currentPence": 53442
+      },
+      {
+        "day": 12,
+        "enginePence": 297035,
+        "currentPence": 57620
+      },
+      {
+        "day": 13,
+        "enginePence": 324700,
+        "currentPence": 62388
+      },
+      {
+        "day": 14,
+        "enginePence": 350777,
+        "currentPence": 65924
+      },
+      {
+        "day": 15,
+        "enginePence": 377919,
+        "currentPence": 69407
+      },
+      {
+        "day": 16,
+        "enginePence": 403259,
+        "currentPence": 72639
+      },
+      {
+        "day": 17,
+        "enginePence": 432106,
+        "currentPence": 77408
+      },
+      {
+        "day": 18,
+        "enginePence": 460421,
+        "currentPence": 80889
+      },
+      {
+        "day": 19,
+        "enginePence": 486031,
+        "currentPence": 83351
+      },
+      {
+        "day": 20,
+        "enginePence": 509224,
+        "currentPence": 87133
+      },
+      {
+        "day": 21,
+        "enginePence": 535312,
+        "currentPence": 91034
+      },
+      {
+        "day": 22,
+        "enginePence": 563626,
+        "currentPence": 96856
+      },
+      {
+        "day": 23,
+        "enginePence": 590566,
+        "currentPence": 102311
+      },
+      {
+        "day": 24,
+        "enginePence": 615603,
+        "currentPence": 108096
+      },
+      {
+        "day": 25,
+        "enginePence": 637976,
+        "currentPence": 111940
+      },
+      {
+        "day": 26,
+        "enginePence": 662069,
+        "currentPence": 117016
+      },
+      {
+        "day": 27,
+        "enginePence": 689307,
+        "currentPence": 122969
+      },
+      {
+        "day": 28,
+        "enginePence": 710776,
+        "currentPence": 125873
+      },
+      {
+        "day": 29,
+        "enginePence": 734752,
+        "currentPence": 130565
+      },
+      {
+        "day": 30,
+        "enginePence": 762341,
+        "currentPence": 132821
+      }
+    ],
+    "lines": [
+      {
+        "lineId": "bagged-rocket-80g",
+        "name": "Bagged Rocket, 80g",
+        "category": "Produce",
+        "meanStockUnits": 33.63333333333333,
+        "engineNetValuePence": 46349,
+        "currentNetValuePence": 32545,
+        "noMarkdownNetValuePence": 26858,
+        "netValueRecoveredPence": 13804,
+        "engineUnitsBinned": 222,
+        "currentUnitsBinned": 431,
+        "wasteAvoidedGrams": 16720,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.3
+          },
+          {
+            "hour": 9,
+            "reduction": 0.5
+          }
+        ]
+      },
+      {
+        "lineId": "british-chicken-thighs-1kg",
+        "name": "British Chicken Thighs, 1kg",
+        "category": "Meat",
+        "meanStockUnits": 26.433333333333334,
+        "engineNetValuePence": 68171,
+        "currentNetValuePence": 23527,
+        "noMarkdownNetValuePence": 14314,
+        "netValueRecoveredPence": 44644,
+        "engineUnitsBinned": 322,
+        "currentUnitsBinned": 440,
+        "wasteAvoidedGrams": 118000,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.4
+          }
+        ]
+      },
+      {
+        "lineId": "strawberries-400g",
+        "name": "Strawberries, 400g",
+        "category": "Produce",
+        "meanStockUnits": 39.1,
+        "engineNetValuePence": 142437,
+        "currentNetValuePence": 96498,
+        "noMarkdownNetValuePence": 84885,
+        "netValueRecoveredPence": 45939,
+        "engineUnitsBinned": 262,
+        "currentUnitsBinned": 508,
+        "wasteAvoidedGrams": 98400,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.3
+          },
+          {
+            "hour": 9,
+            "reduction": 0.5
+          }
+        ]
+      },
+      {
+        "lineId": "whole-milk-2l",
+        "name": "Whole Milk, 2L",
+        "category": "Dairy",
+        "meanStockUnits": 59.2,
+        "engineNetValuePence": 219764,
+        "currentNetValuePence": 191724,
+        "noMarkdownNetValuePence": 198804,
+        "netValueRecoveredPence": 28040,
+        "engineUnitsBinned": 17,
+        "currentUnitsBinned": 51,
+        "wasteAvoidedGrams": 76220,
+        "samplePlan": []
+      },
+      {
+        "lineId": "sourdough-loaf-800g",
+        "name": "Sourdough Loaf, 800g",
+        "category": "Bakery",
+        "meanStockUnits": 22.066666666666666,
+        "engineNetValuePence": 144909,
+        "currentNetValuePence": 128369,
+        "noMarkdownNetValuePence": 135290,
+        "netValueRecoveredPence": 16540,
+        "engineUnitsBinned": 3,
+        "currentUnitsBinned": 3,
+        "wasteAvoidedGrams": 2400,
+        "samplePlan": []
+      },
+      {
+        "lineId": "scottish-salmon-fillets-240g",
+        "name": "Scottish Salmon Fillets, 240g",
+        "category": "Fish",
+        "meanStockUnits": 17.8,
+        "engineNetValuePence": 45352,
+        "currentNetValuePence": 5962,
+        "noMarkdownNetValuePence": 5962,
+        "netValueRecoveredPence": 39390,
+        "engineUnitsBinned": 249,
+        "currentUnitsBinned": 319,
+        "wasteAvoidedGrams": 16800,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.4
+          }
+        ]
+      },
+      {
+        "lineId": "beef-mince-5-500g",
+        "name": "Beef Mince 5%, 500g",
+        "category": "Meat",
+        "meanStockUnits": 30.6,
+        "engineNetValuePence": 123792,
+        "currentNetValuePence": 75595,
+        "noMarkdownNetValuePence": 62381,
+        "netValueRecoveredPence": 48197,
+        "engineUnitsBinned": 264,
+        "currentUnitsBinned": 415,
+        "wasteAvoidedGrams": 75500,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.3
+          },
+          {
+            "hour": 9,
+            "reduction": 0.5
+          }
+        ]
+      },
+      {
+        "lineId": "chicken-caesar-wrap",
+        "name": "Chicken Caesar Wrap",
+        "category": "Food to go",
+        "meanStockUnits": 44.63333333333333,
+        "engineNetValuePence": 123802,
+        "currentNetValuePence": 78464,
+        "noMarkdownNetValuePence": 78464,
+        "netValueRecoveredPence": 45338,
+        "engineUnitsBinned": 599,
+        "currentUnitsBinned": 818,
+        "wasteAvoidedGrams": 48180,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.4
+          }
+        ]
+      },
+      {
+        "lineId": "houmous-200g",
+        "name": "Houmous, 200g",
+        "category": "Chilled",
+        "meanStockUnits": 35.13333333333333,
+        "engineNetValuePence": 83338,
+        "currentNetValuePence": 69981,
+        "noMarkdownNetValuePence": 59402,
+        "netValueRecoveredPence": 13357,
+        "engineUnitsBinned": 80,
+        "currentUnitsBinned": 228,
+        "wasteAvoidedGrams": 29600,
+        "samplePlan": [
+          {
+            "hour": 9,
+            "reduction": 0.1
+          },
+          {
+            "hour": 11,
+            "reduction": 0.5
+          }
+        ]
+      },
+      {
+        "lineId": "raspberries-150g",
+        "name": "Raspberries, 150g",
+        "category": "Produce",
+        "meanStockUnits": 28.3,
+        "engineNetValuePence": 31879,
+        "currentNetValuePence": 3428,
+        "noMarkdownNetValuePence": 3428,
+        "netValueRecoveredPence": 28451,
+        "engineUnitsBinned": 393,
+        "currentUnitsBinned": 526,
+        "wasteAvoidedGrams": 19950,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.3
+          }
+        ]
+      },
+      {
+        "lineId": "fresh-egg-tagliatelle-300g",
+        "name": "Fresh Egg Tagliatelle, 300g",
+        "category": "Chilled",
+        "meanStockUnits": 24.433333333333334,
+        "engineNetValuePence": 107693,
+        "currentNetValuePence": 91231,
+        "noMarkdownNetValuePence": 80818,
+        "netValueRecoveredPence": 16462,
+        "engineUnitsBinned": 49,
+        "currentUnitsBinned": 117,
+        "wasteAvoidedGrams": 21000,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.3
+          },
+          {
+            "hour": 11,
+            "reduction": 0.4
+          }
+        ]
+      },
+      {
+        "lineId": "cooked-king-prawns-180g",
+        "name": "Cooked King Prawns, 180g",
+        "category": "Fish",
+        "meanStockUnits": 15.766666666666667,
+        "engineNetValuePence": 58087,
+        "currentNetValuePence": 30317,
+        "noMarkdownNetValuePence": 35087,
+        "netValueRecoveredPence": 27770,
+        "engineUnitsBinned": 180,
+        "currentUnitsBinned": 244,
+        "wasteAvoidedGrams": 11520,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.4
+          }
+        ]
+      },
+      {
+        "lineId": "coleslaw-300g",
+        "name": "Coleslaw, 300g",
+        "category": "Chilled",
+        "meanStockUnits": 30.3,
+        "engineNetValuePence": 65200,
+        "currentNetValuePence": 54660,
+        "noMarkdownNetValuePence": 48600,
+        "netValueRecoveredPence": 10540,
+        "engineUnitsBinned": 99,
+        "currentUnitsBinned": 204,
+        "wasteAvoidedGrams": 31800,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.1
+          },
+          {
+            "hour": 9,
+            "reduction": 0.4
+          }
+        ]
+      },
+      {
+        "lineId": "blueberries-200g",
+        "name": "Blueberries, 200g",
+        "category": "Produce",
+        "meanStockUnits": 25.166666666666668,
+        "engineNetValuePence": 64237,
+        "currentNetValuePence": 31375,
+        "noMarkdownNetValuePence": 24725,
+        "netValueRecoveredPence": 32862,
+        "engineUnitsBinned": 267,
+        "currentUnitsBinned": 399,
+        "wasteAvoidedGrams": 26400,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.4
+          }
+        ]
+      },
+      {
+        "lineId": "cumberland-sausages-400g",
+        "name": "Cumberland Sausages, 400g",
+        "category": "Meat",
+        "meanStockUnits": 27.4,
+        "engineNetValuePence": 127951,
+        "currentNetValuePence": 98017,
+        "noMarkdownNetValuePence": 78882,
+        "netValueRecoveredPence": 29934,
+        "engineUnitsBinned": 133,
+        "currentUnitsBinned": 279,
+        "wasteAvoidedGrams": 58400,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.1
+          },
+          {
+            "hour": 9,
+            "reduction": 0.6
+          }
+        ]
+      },
+      {
+        "lineId": "egg-and-cress-sandwich",
+        "name": "Egg and Cress Sandwich",
+        "category": "Food to go",
+        "meanStockUnits": 51.233333333333334,
+        "engineNetValuePence": 109330,
+        "currentNetValuePence": 70500,
+        "noMarkdownNetValuePence": 70500,
+        "netValueRecoveredPence": 38830,
+        "engineUnitsBinned": 672,
+        "currentUnitsBinned": 935,
+        "wasteAvoidedGrams": 49970,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.4
+          }
+        ]
+      },
+      {
+        "lineId": "greek-style-yoghurt-500g",
+        "name": "Greek Style Yoghurt, 500g",
+        "category": "Dairy",
+        "meanStockUnits": 30.533333333333335,
+        "engineNetValuePence": 108907,
+        "currentNetValuePence": 93636,
+        "noMarkdownNetValuePence": 84739,
+        "netValueRecoveredPence": 15271,
+        "engineUnitsBinned": 68,
+        "currentUnitsBinned": 129,
+        "wasteAvoidedGrams": 31500,
+        "samplePlan": [
+          {
+            "hour": 11,
+            "reduction": 0.1
+          }
+        ]
+      },
+      {
+        "lineId": "baby-spinach-200g",
+        "name": "Baby Spinach, 200g",
+        "category": "Produce",
+        "meanStockUnits": 29.5,
+        "engineNetValuePence": 48524,
+        "currentNetValuePence": 32422,
+        "noMarkdownNetValuePence": 26418,
+        "netValueRecoveredPence": 16102,
+        "engineUnitsBinned": 260,
+        "currentUnitsBinned": 434,
+        "wasteAvoidedGrams": 34800,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.4
+          },
+          {
+            "hour": 9,
+            "reduction": 0.5
+          }
+        ]
+      },
+      {
+        "lineId": "cod-fillets-260g",
+        "name": "Cod Fillets, 260g",
+        "category": "Fish",
+        "meanStockUnits": 13.933333333333334,
+        "engineNetValuePence": 30517,
+        "currentNetValuePence": 14368,
+        "noMarkdownNetValuePence": 14368,
+        "netValueRecoveredPence": 16149,
+        "engineUnitsBinned": 194,
+        "currentUnitsBinned": 236,
+        "wasteAvoidedGrams": 10920,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.3
+          }
+        ]
+      },
+      {
+        "lineId": "rotisserie-chicken-whole",
+        "name": "Rotisserie Chicken, whole",
+        "category": "Food to go",
+        "meanStockUnits": 19.966666666666665,
+        "engineNetValuePence": 29015,
+        "currentNetValuePence": 10254,
+        "noMarkdownNetValuePence": 10254,
+        "netValueRecoveredPence": 18761,
+        "engineUnitsBinned": 350,
+        "currentUnitsBinned": 398,
+        "wasteAvoidedGrams": 62400,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.4
+          }
+        ]
+      },
+      {
+        "lineId": "vine-tomatoes-400g",
+        "name": "Vine Tomatoes, 400g",
+        "category": "Produce",
+        "meanStockUnits": 33.56666666666667,
+        "engineNetValuePence": 87913,
+        "currentNetValuePence": 65796,
+        "noMarkdownNetValuePence": 56105,
+        "netValueRecoveredPence": 22117,
+        "engineUnitsBinned": 172,
+        "currentUnitsBinned": 389,
+        "wasteAvoidedGrams": 86800,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.3
+          },
+          {
+            "hour": 9,
+            "reduction": 0.5
+          }
+        ]
+      },
+      {
+        "lineId": "fresh-orange-juice-1l",
+        "name": "Fresh Orange Juice, 1L",
+        "category": "Chilled",
+        "meanStockUnits": 26.766666666666666,
+        "engineNetValuePence": 115363,
+        "currentNetValuePence": 95670,
+        "noMarkdownNetValuePence": 84018,
+        "netValueRecoveredPence": 19693,
+        "engineUnitsBinned": 65,
+        "currentUnitsBinned": 156,
+        "wasteAvoidedGrams": 93730,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.3
+          }
+        ]
+      },
+      {
+        "lineId": "chicken-kyiv-2-pack",
+        "name": "Chicken Kyiv, 2 pack",
+        "category": "Chilled",
+        "meanStockUnits": 21.7,
+        "engineNetValuePence": 151694,
+        "currentNetValuePence": 124522,
+        "noMarkdownNetValuePence": 109620,
+        "netValueRecoveredPence": 27172,
+        "engineUnitsBinned": 38,
+        "currentUnitsBinned": 119,
+        "wasteAvoidedGrams": 29160,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.3
+          },
+          {
+            "hour": 11,
+            "reduction": 0.4
+          }
+        ]
+      },
+      {
+        "lineId": "pain-au-chocolat-4-pack",
+        "name": "Pain au Chocolat, 4 pack",
+        "category": "Bakery",
+        "meanStockUnits": 25.7,
+        "engineNetValuePence": 111675,
+        "currentNetValuePence": 97518,
+        "noMarkdownNetValuePence": 89636,
+        "netValueRecoveredPence": 14157,
+        "engineUnitsBinned": 15,
+        "currentUnitsBinned": 69,
+        "wasteAvoidedGrams": 15400,
+        "samplePlan": [
+          {
+            "hour": 5,
+            "reduction": 0.2
+          }
+        ]
+      }
+    ],
+    "totals": {
+      "engine": {
+        "netValuePence": 2245899,
+        "revenuePence": 3126936,
+        "costOfGoodsSoldPence": 1955434,
+        "unitsSold": 16413,
+        "unitsBinned": 4973,
+        "markdownEvents": 997
+      },
+      "current": {
+        "netValuePence": 1616379,
+        "revenuePence": 2895417,
+        "costOfGoodsSoldPence": 1584361,
+        "unitsSold": 13539,
+        "unitsBinned": 7847,
+        "markdownEvents": 808
+      },
+      "noMarkdown": {
+        "netValuePence": 1483558,
+        "revenuePence": 2907775,
+        "costOfGoodsSoldPence": 1426566,
+        "unitsSold": 11897,
+        "unitsBinned": 9489,
+        "markdownEvents": 0
+      }
+    },
+    "wasteAvoidedGrams": 1065570,
+    "unitsRecovered": 2886
+  },
+  "metrics": {
+    "valueRecoveredPence": 629520,
+    "recoveredPercent": 38.9463114776918,
+    "marginRetainedPercent": 37.46485377379006,
+    "wasteAvoidedGrams": 1065570,
+    "carbonDioxideEquivalentKg": 2663.9249999999997,
+    "mealEquivalents": 2237.697,
+    "unitsRecovered": 2886,
+    "markdownEvents": 997
+  }
+}
