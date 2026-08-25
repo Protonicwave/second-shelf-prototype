@@ -6,7 +6,12 @@ import './sections.css';
 
 const WIDTH = 1000;
 const HEIGHT = 340;
-const MARGIN_LEFT = 6;
+/*
+ * The left gutter carries the gridline values and the right one carries the
+ * two series labels. Keeping them apart is what stops a line that finishes
+ * near a gridline from printing its name over the value.
+ */
+const MARGIN_LEFT = 70;
 const MARGIN_RIGHT = 94;
 const MARGIN_TOP = 44;
 const MARGIN_BOTTOM = 34;
@@ -77,7 +82,7 @@ const ChartView = ({ days }: PolicyChartProps): ReactElement | null => {
               stroke={tick === 0 ? 'rgba(18,21,15,.26)' : 'rgba(18,21,15,.07)'}
               strokeWidth={1}
             />
-            <text className="axis-t" x={MARGIN_LEFT + innerWidth + 10} y={y(value) + 3.5}>
+            <text className="axis-t" x={MARGIN_LEFT - 12} y={y(value) + 3.5} textAnchor="end">
               {formatPounds(value)}
             </text>
           </g>
