@@ -1,0 +1,23 @@
+{
+  "name": "@secondshelf/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "React front end for the markdown timing prototype",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@secondshelf/domain": "*",
+    "@secondshelf/engine": "*"
+  }
+}

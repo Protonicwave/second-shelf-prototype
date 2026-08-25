@@ -1,0 +1,40 @@
+{
+  "name": "second-shelf-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Markdown timing engine for grocery fresh waste",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/engine",
+    "packages/domain",
+    "packages/api",
+    "packages/web"
+  ],
+  "scripts": {
+    "typecheck": "tsc -b",
+    "lint": "eslint . && prettier --check .",
+    "test": "vitest run --passWithNoTests",
+    "build": "tsc -b",
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run build",
+    "dev": "npm run dev --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^22.18.12",
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vitest": "^3.2.4"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

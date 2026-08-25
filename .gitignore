@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+coverage/
+*.tsbuildinfo
+
+# environment and data
+.env
+.env.*
+*.db
+*.db-shm
+*.db-wal
+
+# process files, never committed
+.claude/
+PLAN.md
+mockup.html
+
+# editors
+.vscode/
+.idea/
+*.swp
+
+# operating system
+.DS_Store
+Thumbs.db
+desktop.ini
