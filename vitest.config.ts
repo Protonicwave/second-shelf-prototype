@@ -1,17 +1,20 @@
 import { defineConfig } from 'vitest/config';
 
-const packages = ['engine', 'domain', 'api', 'web'];
+const nodePackages = ['engine', 'domain', 'api'];
 
 export default defineConfig({
   test: {
-    projects: packages.map((name) => ({
-      test: {
-        name,
-        root: `./packages/${name}`,
-        environment: 'node',
-        include: ['src/**/*.test.ts'],
-      },
-    })),
+    projects: [
+      ...nodePackages.map((name) => ({
+        test: {
+          name,
+          root: `./packages/${name}`,
+          environment: 'node',
+          include: ['src/**/*.test.ts'],
+        },
+      })),
+      './packages/web/vitest.config.ts',
+    ],
     coverage: {
       provider: 'v8',
       reporter: ['text', 'lcov'],

@@ -1,0 +1,103 @@
+/* Presentational shells shared by every section. No section owns these. */
+
+.band {
+  border-top: 1px solid var(--rule);
+}
+
+.band-inner {
+  padding-top: var(--band-pad);
+  padding-bottom: var(--band-pad);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--size-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink2);
+}
+
+.lede {
+  font-size: var(--size-lede);
+  line-height: 1.55;
+  color: var(--ink2);
+  max-width: 62ch;
+}
+
+.note {
+  font-size: var(--size-small);
+  line-height: 1.5;
+  color: var(--ink3);
+  max-width: 64ch;
+}
+
+.sec-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: start;
+}
+
+.sec-head h2 {
+  margin-top: 14px;
+}
+
+@media (max-width: 860px) {
+  .sec-head {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.fig {
+  padding: 28px 24px 26px;
+  border-right: 1px solid var(--rule-soft);
+}
+
+.fig-label {
+  font-family: var(--font-mono);
+  font-size: var(--size-eyebrow);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink2);
+}
+
+.fig-value {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--size-figure);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-top: 14px;
+}
+
+.fig-sub {
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: var(--ink3);
+  line-height: 1.45;
+}
+
+.chip {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--size-eyebrow);
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: var(--radius);
+  letter-spacing: 0.02em;
+  background: var(--ticket-wash);
+  color: var(--ticket-deep);
+}
+
+.chip-slate {
+  background: var(--slate-wash);
+  color: var(--slate-deep);
+}
+
+.chip-quiet {
+  background: var(--wash);
+  color: var(--ink3);
+}

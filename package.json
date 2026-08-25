@@ -15,10 +15,10 @@
     "packages/web"
   ],
   "scripts": {
-    "typecheck": "tsc -b",
+    "typecheck": "tsc -b && npm run typecheck --workspace @secondshelf/web",
     "lint": "eslint . && prettier --check .",
     "test": "vitest run --passWithNoTests",
-    "build": "tsc -b",
+    "build": "tsc -b && npm run build --workspace @secondshelf/web",
     "verify": "npm run typecheck && npm run lint && npm run test && npm run build",
     "dev": "npm run dev --workspaces --if-present"
   },
